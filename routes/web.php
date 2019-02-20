@@ -28,7 +28,9 @@ Route::get('/manage', function () {
 });
 
 
-Route::get('/manage/search', 'ManageController@formSearchByName');
+//This is post because it's arriving from a post FORM
+Route::post('/manage/search', 'ManageController@formSearchByName');
+Route::post('/manage/searchtype', 'ManageController@formSearchByType');
 
-Route::get('contact', 'ContactController@create')->name('contact.create');
-Route::post('contact', 'ContactController@store')->name('contact.store');
+//Route::get('contact', 'ContactController@create')->name('contact.create');
+//Route::post('contact', 'ContactController@store')->name('contact.store');

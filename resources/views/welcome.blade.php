@@ -66,9 +66,19 @@
     <body>
         <div class="flex-center position-ref full-height">
                         <div class="content">
-                <div class="title m-b-md">
+
+                            <?php
+//                            phpinfo();
+                            ?>
+                            <div class="title m-b-md">
                     Hola
                 </div>
+
+                <div class="links">
+                    <a href="/manage">Manage App</a>
+                </div>
+
+                <hr />
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>

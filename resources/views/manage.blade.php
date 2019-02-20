@@ -19,12 +19,21 @@
             <ul>
                 <li><a href="http://localhost:8080/video/all" target="_blank">View All</a></li>
                 <li><a href="http://localhost:8080/video/id/2" target="_blank">View By Id (eg. 1)</a></li>
-                <li><a href="http://localhost:8080/video/type/SERIE" target="_blank">View By Type (eg. MOVIE)</a></li>
+                {{--<li><a href="http://localhost:8080/video/type/SERIE" target="_blank">View By Type (eg. MOVIE)</a></li>--}}
                 <li>
-                    {!! Form::open(array('action' => 'ManageController@formSearchByName')) !!}
+                    {!! Form::open(array('url' => '/manage/searchtype')) !!}
+                    {{ Form::select('video_type', array( 'SERIE' => 'Serie',
+                                                    'MOVIE' => 'Movie',
+                                                    'TVSHOW' => 'TV Show',
+                                                    'DOCUMENTARY' => 'Documentary'), 'Movie') }}
 
-                    {{ Form::password('password') }}
+                    {{ Form::submit('Go') }}
+                    {!! Form::close() !!}
+                </li>
+                <li>
+                    {!! Form::open(array('url' => '/manage/search')) !!}
 
+                    {{ Form::text('name') }}
                     {{ Form::submit('Send') }}
 
                     {!! Form::close() !!}
