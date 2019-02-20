@@ -10,9 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Route::get('/', 'ManageController@index');
-
-
 
 
 Route::get('/', function () {
@@ -32,5 +29,8 @@ Route::get('/manage', function () {
 Route::post('/manage/search', 'ManageController@formSearchByName');
 Route::post('/manage/searchtype', 'ManageController@formSearchByType');
 
-//Route::get('contact', 'ContactController@create')->name('contact.create');
-//Route::post('contact', 'ContactController@store')->name('contact.store');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

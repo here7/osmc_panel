@@ -76,6 +76,7 @@
 
                 <div class="links">
                     <a href="/manage">Manage App</a>
+                    <a href="/login">Login App</a>
                 </div>
 
                 <hr />
